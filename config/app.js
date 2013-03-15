@@ -2,7 +2,6 @@ define(function(require, exports, module) {
 
 	var Backbone = require('backbone');
 
-	//配置路由
 	var autoRouter = Backbone.Router.extend({
 		routes: {
 			'': 'home',
@@ -27,7 +26,7 @@ define(function(require, exports, module) {
 				if(cb) {
 					cb(cj);
 				} else {
-					alert('模块加载失败！');
+					console.log('模块加载失败！');
 				}
 			})
 		}
@@ -41,7 +40,7 @@ define(function(require, exports, module) {
 		initialize: function() {
 			console.log("app start....");	
 			new autoRouter();
-			 Backbone.history.start();
+			Backbone.history.start();
 	    }  
 	};
 

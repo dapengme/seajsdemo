@@ -1,5 +1,5 @@
 seajs.config({
-	plugins: ['shim'],
+	plugins: ['shim','nocache','text'],
 	alias: {
 		'jquery': {
 			src: 'lib/jquery-1.9.1.min.js',

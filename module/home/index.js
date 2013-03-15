@@ -1,5 +1,8 @@
-define('module/home/index', ['backbone'], function(reuqire) {
-	var Backbone = reuqire('backbone');
+define(function(require, exports, module) {
+	var Backbone = require('backbone');
+
+  	var tpl = require('./tpl/index.tpl')
+
 	App.Models.Home = Backbone.Model.extend({});
 
 	App.Collections.Home = Backbone.Collection.extend({
@@ -17,7 +20,9 @@ define('module/home/index', ['backbone'], function(reuqire) {
 			this.Collections.each(function(m) {
 				html += '<div><a href="' + m.get('link') + '">' + m.get('name') + '</a></div>';
 			});
+			
 			this.$el.html(html);
+			return this;
 		}
 	})
 
